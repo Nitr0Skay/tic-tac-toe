@@ -1,3 +1,4 @@
+let currentRound = 1;
 let editedPlayer = 0;
 let activePlayer = 0;
 
