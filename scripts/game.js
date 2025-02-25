@@ -4,6 +4,17 @@ function startNewGame() {
         // Here's the window to improve
         return;
     }
-
+    activePlayerNameElement.textContent = players[activePlayer].name;
     gameAreaElement.style.display = 'block';
+}
+
+function switchPlayer() { 
+    activePlayer = (activePlayer) ? 0 : 1; 
+    activePlayerNameElement.textContent = players[activePlayer].name;
+}
+
+function selectGameField(event) {
+    event.target.textContent = players[activePlayer].symbol;
+    event.target.classList.add('disabled');
+    switchPlayer();
 }
